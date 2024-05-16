@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Gestión de Seguridad</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- left column -->
+      <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Control de Seguridad</h3>
+          </div>
+          <!-- /.card-header -->
+          <!-- form start -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Operaciones:</label>
+                  <select class="form-control" id="securityOperations" onchange="toggleForm()">
+                    <option value="">Selecciona una operación</option>
+                    <option value="entry">Registro de Entrada</option>
+                    <option value="exit">Registro de Salida</option>
+                    <option value="incident">Registro de Incidente</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div id="entryForm" style="display: none;">
+              <h4>Registro de Entrada</h4>
+              <form>
+                <div class="form-group">
+                  <label for="entryVisitorName">Nombre del Visitante</label>
+                  <input type="text" class="form-control" id="entryVisitorName" placeholder="Nombre del Visitante">
+                </div>
+                <div class="form-group">
+                  <label for="entryPurpose">Motivo de Visita</label>
+                  <input type="text" class="form-control" id="entryPurpose" placeholder="Motivo de Visita">
+                </div>
+                <button type="button" onclick="confirmEntry()" class="btn btn-primary">Registrar Entrada</button>
+              </form>
+            </div>
+            <div id="exitForm" style="display: none;">
+              <h4>Registro de Salida</h4>
+              <form>
+                <div class="form-group">
+                  <label for="exitVisitorName">Nombre del Visitante</label>
+                  <input type="text" class="form-control" id="exitVisitorName" placeholder="Nombre del Visitante">
+                </div>
+                <button type="button" onclick="confirmExit()" class="btn btn-primary">Registrar Salida</button>
+              </form>
+            </div>
+            <div id="incidentForm" style="display: none;">
+              <h4>Registro de Incidente</h4>
+              <form>
+                <div class="form-group">
+                  <label for="incidentDescription">Descripción del Incidente</label>
+                  <textarea class="form-control" id="incidentDescription" rows="3" placeholder="Descripción del Incidente"></textarea>
+                </div>
+                <button type="button" onclick="confirmIncident()" class="btn btn-primary">Registrar Incidente</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Botón para redirigir a la página principal -->
+    <div class="row">
+      <div class="col-md-12">
+        <a href="../index.html" class="btn btn-secondary">Volver a Inicio</a>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<script>
+  function toggleForm() {
+    var selectBox = document.getElementById("securityOperations");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+    document.getElementById("entryForm").style.display = "none";
+    document.getElementById("exitForm").style.display = "none";
+    document.getElementById("incidentForm").style.display = "none";
+
+    if (selectedValue === "entry") {
+      document.getElementById("entryForm").style.display = "block";
+    } else if (selectedValue === "exit") {
+      document.getElementById("exitForm").style.display = "block";
+    } else if (selectedValue === "incident") {
+      document.getElementById("incidentForm").style.display = "block";
+    }
+  }
+
+  function confirmEntry() {
+    if (confirm("¿Estás seguro de registrar la entrada de este visitante?")) {
+      // Aquí iría la lógica para registrar la entrada
+      var visitorName = document.getElementById("entryVisitorName").value;
+      var purpose = document.getElementById("entryPurpose").value;
+      console.log("Registrar entrada:", visitorName, purpose);
+      alert("¡Entrada registrada exitosamente!");
+    }
+  }
+
+  function confirmExit() {
+    if (confirm("¿Estás seguro de registrar la salida de este visitante?")) {
+      // Aquí iría la lógica para registrar la salida
+      var visitorName = document.getElementById("exitVisitorName").value;
+      console.log("Registrar salida:", visitorName);
+      alert("¡Salida registrada exitosamente!");
+    }
+  }
+
+  function confirmIncident() {
+    if (confirm("¿Estás seguro de registrar este incidente?")) {
+      // Aquí iría la lógica para registrar el incidente
+      var description = document.getElementById("incidentDescription").value;
+      console.log("Registrar incidente:", description);
+      alert("¡Incidente registrado exitosamente!");
+    }
+  }
+</script>
+
+</body>
+</html>
