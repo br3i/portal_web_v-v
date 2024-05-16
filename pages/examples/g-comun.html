@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portal_web_vv</title>
+    <title>AdminLTE 3 | Project Detail</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link
@@ -11,51 +11,16 @@
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
     />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
-    <!-- Ionicons -->
     <link
       rel="stylesheet"
-      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      href="../../plugins/fontawesome-free/css/all.min.css"
     />
-    <!-- Tempusdominus Bootstrap 4 -->
-    <link
-      rel="stylesheet"
-      href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
-    />
-    <!-- iCheck -->
-    <link
-      rel="stylesheet"
-      href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"
-    />
-    <!-- JQVMap -->
-    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css" />
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
-    <!-- overlayScrollbars -->
-    <link
-      rel="stylesheet"
-      href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
-    />
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
-    <!-- summernote -->
-    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
   </head>
-  <body class="hold-transition sidebar-mini layout-fixed">
+  <body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
     <div class="wrapper">
-      <!-- Preloader -->
-      <div
-        class="preloader flex-column justify-content-center align-items-center"
-      >
-        <img
-          class="animation__shake"
-          src="dist/img/AdminLTELogo.png"
-          alt="AdminLTELogo"
-          height="60"
-          width="60"
-        />
-      </div>
-
       <!-- Navbar -->
       <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
@@ -66,7 +31,7 @@
             ></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="../../index.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
@@ -122,7 +87,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="dist/img/user1-128x128.jpg"
+                    src="../../dist/img/user1-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 mr-3 img-circle"
                   />
@@ -146,7 +111,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="dist/img/user8-128x128.jpg"
+                    src="../../dist/img/user8-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -170,7 +135,7 @@
                 <!-- Message Start -->
                 <div class="media">
                   <img
-                    src="dist/img/user3-128x128.jpg"
+                    src="../../dist/img/user3-128x128.jpg"
                     alt="User Avatar"
                     class="img-size-50 img-circle mr-3"
                   />
@@ -235,7 +200,7 @@
             <a
               class="nav-link"
               data-widget="control-sidebar"
-              data-controlsidebar-slide="true"
+              data-slide="true"
               href="#"
               role="button"
             >
@@ -249,9 +214,9 @@
       <!-- Main Sidebar Container -->
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="index.html" class="brand-link">
+        <a href="../../index.html" class="brand-link">
           <img
-            src="dist/img/AdminLTELogo.png"
+            src="../../dist/img/AdminLTELogo.png"
             alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3"
             style="opacity: 0.8"
@@ -261,17 +226,17 @@
 
         <!-- Sidebar -->
         <div class="sidebar">
-          <!-- Sidebar user panel (optional) -->
+          <!-- Sidebar user (optional) -->
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
               <img
-                src="dist/img/user2-160x160.jpg"
+                src="../../dist/img/user2-160x160.jpg"
                 class="img-circle elevation-2"
                 alt="User Image"
               />
             </div>
             <div class="info">
-              <a href="#" class="d-block">Mario Brito</a>
+              <a href="#" class="d-block">Alexander Pierce</a>
             </div>
           </div>
 
@@ -382,184 +347,235 @@
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <div class="content-header">
+        <section class="content-header">
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Dashboard</h1>
+                <h1>Project Detail</h1>
               </div>
-              <!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                  <li class="breadcrumb-item active">Dashboard</li>
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">Project Detail</li>
                 </ol>
               </div>
-              <!-- /.col -->
             </div>
-            <!-- /.row -->
           </div>
           <!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
+        </section>
 
         <!-- Main content -->
         <section class="content">
-          <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
-            <div class="row">
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-info">
-                  <div class="inner">
-                    <p>Gestión de Personal</p>
+          <!-- Default box -->
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+                  <div class="row">
+                    <div class="col-12">
+                      <h4>Comunicados del Condominio</h4>
+                      <div class="post">
+                        <div class="user-block">
+                          <img
+                            class="img-circle img-bordered-sm"
+                            src="../../dist/img/user1-128x128.jpg"
+                            alt="imagen de usuario"
+                          />
+                          <span class="username"
+                            ><a href="#">Jonathan Burke Jr.</a></span
+                          >
+                          <span class="description"
+                            >Compartido públicamente - Hoy a las 7:45 PM</span
+                          >
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                          Este es un recordatorio para todos los residentes del
+                          condominio XYZ. Mañana, de 8:00 a.m. a 12:00 p.m., se
+                          llevará a cabo un mantenimiento programado en las
+                          áreas comunes. Durante este tiempo, se solicita a
+                          todos los residentes evitar el acceso a las zonas
+                          afectadas por el mantenimiento. Agradecemos su
+                          cooperación.
+                        </p>
+                        <p>
+                          <a href="#" class="link-black text-sm"
+                            ><i class="fas fa-link mr-1"></i> Archivo de
+                            Demostración 1 v2</a
+                          >
+                        </p>
+                      </div>
+
+                      <div class="post clearfix">
+                        <div class="user-block">
+                          <img
+                            class="img-circle img-bordered-sm"
+                            src="../../dist/img/user7-128x128.jpg"
+                            alt="Imagen de Usuario"
+                          />
+                          <span class="username"
+                            ><a href="#">Sarah Ross</a></span
+                          >
+                          <span class="description"
+                            >Te envió un mensaje - hace 3 días</span
+                          >
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                          ¡Hola vecinos! Nos complace anunciar que el próximo
+                          sábado, organizaremos un evento de recolección de
+                          donaciones para ayudar a familias necesitadas en
+                          nuestra comunidad. Estaremos recogiendo alimentos no
+                          perecederos, ropa en buen estado y artículos de
+                          higiene personal en el área de la entrada principal
+                          desde las 10:00 a.m. hasta las 2:00 p.m. ¡Esperamos
+                          contar con su generosa contribución!
+                        </p>
+                        <p>
+                          <a href="#" class="link-black text-sm"
+                            ><i class="fas fa-link mr-1"></i> Archivo de
+                            Demostración 2</a
+                          >
+                        </p>
+                      </div>
+
+                      <div class="post">
+                        <div class="user-block">
+                          <img
+                            class="img-circle img-bordered-sm"
+                            src="../../dist/img/user1-128x128.jpg"
+                            alt="imagen de usuario"
+                          />
+                          <span class="username"
+                            ><a href="#">Jonathan Burke Jr.</a></span
+                          >
+                          <span class="description"
+                            >Compartido públicamente - hace 5 días</span
+                          >
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                          Queridos residentes, les informamos que a partir de la
+                          próxima semana, el horario del gimnasio del condominio
+                          se modificará. El nuevo horario de operación será de
+                          lunes a viernes, de 6:00 a.m. a 10:00 p.m., y los
+                          fines de semana de 8:00 a.m. a 8:00 p.m. Les pedimos
+                          que tomen nota de este cambio y que lo compartan con
+                          sus familias. ¡Gracias por su comprensión!
+                        </p>
+                        <p>
+                          <a href="#" class="link-black text-sm"
+                            ><i class="fas fa-link mr-1"></i> Archivo de
+                            Demostración 1 v1</a
+                          >
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="icon">
-                    <i class="nav-icon fas fa-user-clock"></i>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
+                  <h3 class="text-primary">
+                    <i class="fas fa-paint-brush"></i> Condominio XYZ
+                  </h3>
+                  <p class="text-muted">
+                    ¡Bienvenidos al Condominio XYZ! </br> </br> Queridos residentes, </br> En
+                    nombre de la junta directiva y de todos los miembros de la
+                    comunidad, nos complace darles la más cordial bienvenida a
+                    su nuevo hogar en el Condominio XYZ. Estamos emocionados de
+                    tenerlos como parte de nuestra comunidad y esperamos que su
+                    experiencia aquí sea excepcional.  </br> </br>Para garantizar un
+                    ambiente armonioso y seguro para todos los residentes,
+                    queremos recordarles algunas de las reglas y regulaciones
+                    del condominio: </br> <b></br>Horario de Silencio:</b> Les pedimos amablemente
+                    que respeten el horario de silencio establecido desde las
+                    10:00 p.m. hasta las 8:00 a.m. Esto garantiza el descanso y
+                    la tranquilidad de todos los residentes.</br></br> <b>Uso de
+                    Instalaciones Comunes: </b> Por favor, utilicen las instalaciones
+                    comunes, como la piscina y el gimnasio, de acuerdo con las
+                    normas establecidas. Recuerden limpiar después de su uso y
+                    respetar a los demás residentes. </br></br><b>Mascotas:</b> Si tienen
+                    mascotas, les recordamos que deben mantenerlas con correa en
+                    todo momento al aire libre y recoger después de ellas.
+                    Además, por favor, respeten las áreas designadas para
+                    mascotas. </br></br><b>Estacionamiento: </b>Por favor, estacionen sus
+                    vehículos solo en las áreas designadas y eviten obstruir los
+                    espacios de otros residentes.</br></br> Estas son solo algunas de las
+                    pautas que ayudarán a mantener nuestra comunidad limpia,
+                    segura y acogedora para todos. Les instamos a revisar el
+                    reglamento completo del condominio para familiarizarse con
+                    todas las normativas.</br></br> Una vez más, ¡bienvenidos al
+                    Condominio XYZ! Esperamos que disfruten de su estadía aquí y
+                    que encuentren este lugar como un hogar cálido y acogedor.
+                    Atentamente, La Junta Directiva del Condominio XYZ
+                  </p>
+                  <br />
+                  <div class="text-muted">
+                    <p class="text-sm">
+                      Empresa Cliente <b class="d-block">Condominio XYZ</b>
+                    </p>
+                    <p class="text-sm">
+                      Líder del Proyecto <b class="d-block">Juan Pérez</b>
+                    </p>
                   </div>
-                  <a href="#" class="small-box-footer"
-                    >Más Información <i class="fas fa-arrow-circle-right"></i
-                  ></a>
+
+                  <h5 class="mt-5 text-muted">Archivos del Proyecto</h5>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="" class="btn-link text-secondary"
+                        ><i class="far fa-fw fa-file-word"></i> Requisitos
+                        Funcionales.docx</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="btn-link text-secondary"
+                        ><i class="far fa-fw fa-file-pdf"></i> UAT.pdf</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="btn-link text-secondary"
+                        ><i class="far fa-fw fa-envelope"></i>
+                        Correo-electrónico-de-flatbal.mln</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="btn-link text-secondary"
+                        ><i class="far fa-fw fa-image"></i> Logotipo.png</a
+                      >
+                    </li>
+                    <li>
+                      <a href="" class="btn-link text-secondary"
+                        ><i class="far fa-fw fa-file-word"></i>
+                        Contrato-10_12_2014.docx</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="text-center mt-5 mb-3">
+                    <a href="#" class="btn btn-sm btn-primary"
+                      >Agregar archivos</a
+                    >
+                    <a href="#" class="btn btn-sm btn-warning"
+                      >Reportar contacto</a
+                    >
+                  </div>
                 </div>
               </div>
-              <!-- ./col -->
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-success">
-                  <div class="inner">
-                    <p>Gestión de Inmuebles</p>
-                  </div>
-                  <div class="icon">
-                    <i class="nav-icon fas fa-building"></i>
-                  </div>
-                  <a href="#" class="small-box-footer"
-                    >More info <i class="fas fa-arrow-circle-right"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- ./col -->
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-warning">
-                  <div class="inner">
-                    <p>Gestión de Pagos</p>
-                  </div>
-                  <div class="icon">
-                    <i class="nav-icon fas fa-money-check-alt"></i>
-                  </div>
-                  <a href="#" class="small-box-footer"
-                    >More info <i class="fas fa-arrow-circle-right"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- ./col -->
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-white">
-                  <div class="inner">
-                    <p>Gestión de Áreas Comunales</p>
-                  </div>
-                  <div class="icon">
-                    <i class="nav-icon fas fa-door-open"></i>
-                  </div>
-                  <a
-                    href="pages/examples/g-areas-com.html"
-                    class="small-box-footer"
-                    >More info <i class="fas fa-arrow-circle-right"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-info">
-                  <div class="inner">
-                    <p>Gestión de Comunicaciones</p>
-                  </div>
-                  <div class="icon">
-                    <i class="nav-icon fas fa-comment-alt"></i>
-                  </div>
-                  <a href="pages/examples/g-comun.html" class="small-box-footer"
-                    >More info <i class="fas fa-arrow-circle-right"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-success">
-                  <div class="inner">
-                    <p>Gestión de Información sobre Residentes</p>
-                  </div>
-                  <div class="icon">
-                    <i class="nav-icon fas fa-users"></i>
-                  </div>
-                  <a
-                    href="pages/examples/g-info-res.html"
-                    class="small-box-footer"
-                    >More info <i class="fas fa-arrow-circle-right"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-warning">
-                  <div class="inner">
-                    <p>Gestión de Servicios</p>
-                  </div>
-                  <div class="icon">
-                    <i class="nav-icon fas fa-tools"></i>
-                  </div>
-                  <a href="#" class="small-box-footer"
-                    >More info <i class="fas fa-arrow-circle-right"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-dark">
-                  <div class="inner">
-                    <p>Gestión de Seguridad</p>
-                  </div>
-                  <div class="icon">
-                    <i class="nav-icon fas fa-shield-alt"></i>
-                  </div>
-                  <a href="#" class="small-box-footer"
-                    >More info <i class="fas fa-arrow-circle-right"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-info">
-                  <div class="inner">
-                    <p>Gestión de Proveedores</p>
-                  </div>
-                  <div class="icon">
-                    <i class="nav-icon fas fa-truck"></i>
-                  </div>
-                  <a href="#" class="small-box-footer"
-                    >More info <i class="fas fa-arrow-circle-right"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- ./col -->
             </div>
-            <!-- /.row -->
-            <!-- /.row (main row) -->
+            <!-- /.card-body -->
           </div>
-          <!-- /.container-fluid -->
+
+          <!-- /.card -->
         </section>
         <!-- /.content -->
       </div>
       <!-- /.content-wrapper -->
+
       <footer class="main-footer">
+        <div class="float-right d-none d-sm-block"><b>Version</b> 3.2.0</div>
         <strong
           >Copyright &copy; 2014-2021
           <a href="https://adminlte.io">AdminLTE.io</a>.</strong
         >
         All rights reserved.
-        <div class="float-right d-none d-sm-inline-block">
-          <b>Version</b> 3.2.0
-        </div>
       </footer>
 
       <!-- Control Sidebar -->
@@ -571,38 +587,12 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-      $.widget.bridge("uibutton", $.ui.button);
-    </script>
+    <script src="../../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
-    <!-- JQVMap -->
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- daterangepicker -->
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.js"></script>
+    <script src="../../dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
+    <script src="../../dist/js/demo.js"></script>
   </body>
 </html>
