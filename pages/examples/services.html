@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdminLTE 3 | Contacts</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="../../plugins/fontawesome-free/css/all.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
+  </head>
+  <body class="hold-transition sidebar-mini">
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="../../index.html" class="brand-link">
+        <img
+          src="../../dist/img/AdminLTELogo.png"
+          alt="AdminLTE Logo"
+          class="brand-image img-circle elevation-3"
+          style="opacity: 0.8"
+        />
+        <span class="brand-text font-weight-light">PortalWeb_V&V</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img
+              src="../../dist/img/user2-160x160.jpg"
+              class="img-circle elevation-2"
+              alt="User Image"
+            />
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Alexander Pierce</a>
+          </div>
+        </div>
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+          <div class="input-group" data-widget="sidebar-search">
+            <input
+              class="form-control form-control-sidebar"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-sidebar">
+                <i class="fas fa-search fa-fw"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul
+            class="nav nav-pills nav-sidebar flex-column"
+            data-widget="treeview"
+            role="menu"
+            data-accordion="false"
+          >
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item menu-open">
+              <a href="./index.html" class="nav-link active">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Inicio</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/" class="nav-link">
+                <i class="nav-icon fas fa-user-clock"></i>
+                <!-- Icono relacionado a gestión de personal -->
+                <p>Gestión de Personal</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/" class="nav-link">
+                <i class="nav-icon fas fa-building"></i>
+                <!-- Icono relacionado a gestión de inmuebles -->
+                <p>Gestión de Inmuebles</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/" class="nav-link">
+                <i class="nav-icon fas fa-money-check-alt"></i>
+                <!-- Icono relacionado a gestión de pagos -->
+                <p>Gestión de Pagos</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/g-areas-com.html" class="nav-link">
+                <i class="nav-icon fas fa-door-open"></i>
+                <!-- Icono relacionado a gestión de áreas comunes -->
+                <p>Gestión de Áreas Comunales</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/g-comun.html" class="nav-link">
+                <i class="nav-icon fas fa-comment-alt"></i>
+                <!-- Icono relacionado a gestión de comunicaciones -->
+                <p>Gestión de Comunicaciones</p>
+                <span class="badge badge-info right">2</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/g-info-res.html" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <!-- Icono relacionado a gestión de información sobre residentes -->
+                <p>Gestión de Información sobre Residentes</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/services.html" class="nav-link">
+                <i class="nav-icon fas fa-tools"></i>
+                <!-- Icono relacionado a gestión de servicios -->
+                <p>Gestión de Servicios</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/security.html" class="nav-link">
+                <i class="nav-icon fas fa-shield-alt"></i>
+                <!-- Icono relacionado a gestión de seguridad -->
+                <p>Gestión de Seguridad</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/examples/proveedores.html" class="nav-link">
+                <i class="nav-icon fas fa-truck"></i>
+                <!-- Icono relacionado a gestión de proveedores -->
+                <p>Gestión de Proveedores</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Main content -->
+
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Gestión de Servicios</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label>Operaciones:</label>
+                        <select
+                          class="form-control"
+                          id="crudOperations"
+                          onchange="toggleForm()"
+                        >
+                          <option value="">Selecciona una operación</option>
+                          <option value="create">Crear</option>
+                          <option value="read">Buscar</option>
+                          <option value="update">Actualizar</option>
+                          <option value="delete">Eliminar</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="createForm" style="display: none">
+                    <h4>Crear Servicio</h4>
+                    <form>
+                      <div class="form-group">
+                        <label for="createServiceName"
+                          >Nombre de Servicio</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="createServiceName"
+                          placeholder="Nombre Servicio"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="createServiceDescription"
+                          >Descripción</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="createServiceDescription"
+                          placeholder="Descripción"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        onclick="confirmCreate()"
+                        class="btn btn-primary"
+                      >
+                        Crear
+                      </button>
+                    </form>
+                  </div>
+                  <div id="readForm" style="display: none">
+                    <h4>Buscar Servicio</h4>
+                    <form>
+                      <div class="form-group">
+                        <label for="readServiceName"
+                          >Nombre de Servicio a Buscar</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="readServiceName"
+                          placeholder="Nombre Servicio"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        onclick="confirmRead()"
+                        class="btn btn-primary"
+                      >
+                        Buscar
+                      </button>
+                      <!-- Aquí se mostrarán los resultados de la búsqueda -->
+                    </form>
+                  </div>
+                  <div id="updateForm" style="display: none">
+                    <h4>Actualizar Servicio</h4>
+                    <form>
+                      <div class="form-group">
+                        <label for="updateServiceName"
+                          >Nombre de Servicio a Actualizar</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="updateServiceName"
+                          placeholder="Nombre Servicio"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="updateServiceDescription"
+                          >Nueva Descripción</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="updateServiceDescription"
+                          placeholder="Nueva Descripción"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        onclick="confirmUpdate()"
+                        class="btn btn-primary"
+                      >
+                        Actualizar
+                      </button>
+                    </form>
+                  </div>
+                  <div id="deleteForm" style="display: none">
+                    <h4>Eliminar Servicio</h4>
+                    <form>
+                      <div class="form-group">
+                        <label for="deleteServiceName"
+                          >Nombre de Servicio a Eliminar</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="deleteServiceName"
+                          placeholder="Nombre Servicio"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        onclick="confirmDelete()"
+                        class="btn btn-primary"
+                      >
+                        Eliminar
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Botón para redirigir a index.html -->
+          <div class="row">
+            <div class="col-md-12">
+              <a href="../index.html" class="btn btn-secondary"
+                >Volver a Inicio</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+
+    <script>
+      function toggleForm() {
+        var selectBox = document.getElementById("crudOperations");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+        document.getElementById("createForm").style.display = "none";
+        document.getElementById("readForm").style.display = "none";
+        document.getElementById("updateForm").style.display = "none";
+        document.getElementById("deleteForm").style.display = "none";
+
+        if (selectedValue === "create") {
+          document.getElementById("createForm").style.display = "block";
+        } else if (selectedValue === "read") {
+          document.getElementById("readForm").style.display = "block";
+        } else if (selectedValue === "update") {
+          document.getElementById("updateForm").style.display = "block";
+        } else if (selectedValue === "delete") {
+          document.getElementById("deleteForm").style.display = "block";
+        }
+      }
+
+      function confirmCreate() {
+        if (confirm("¿Estás seguro de que quieres crear este servicio?")) {
+          // Aquí iría la lógica para crear el servicio
+          console.log("Servicio creado.");
+          alert("¡Servicio creado exitosamente!");
+        }
+      }
+
+      function confirmRead() {
+        if (confirm("¿Estás seguro de que quieres buscar este servicio?")) {
+          // Aquí iría la lógica para buscar el servicio
+          var serviceName = document.getElementById("readServiceName").value;
+          console.log("Buscar servicio:", serviceName);
+          // Aquí deberías mostrar los resultados de la búsqueda
+          alert("¡Búsqueda exitosa!");
+        }
+      }
+
+      function confirmUpdate() {
+        if (confirm("¿Estás seguro de que quieres actualizar este servicio?")) {
+          // Aquí iría la lógica para actualizar el servicio
+          var serviceName = document.getElementById("updateServiceName").value;
+          var serviceDescription = document.getElementById(
+            "updateServiceDescription"
+          ).value;
+          console.log("Actualizar servicio:", serviceName, serviceDescription);
+          alert("¡Servicio actualizado exitosamente!");
+        }
+      }
+
+      function confirmDelete() {
+        if (confirm("¿Estás seguro de que quieres eliminar este servicio?")) {
+          // Aquí iría la lógica para eliminar el servicio
+          var serviceName = document.getElementById("deleteServiceName").value;
+          console.log("Eliminar servicio:", serviceName);
+          alert("¡Servicio eliminado exitosamente!");
+        }
+      }
+    </script>
+  </body>
+</html>
