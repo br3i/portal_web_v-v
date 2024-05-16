@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Gestión de Proveedores</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- left column -->
+      <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Gestión de Proveedores</h3>
+          </div>
+          <!-- /.card-header -->
+          <!-- form start -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Operaciones:</label>
+                  <select class="form-control" id="supplierOperations" onchange="toggleForm()">
+                    <option value="">Selecciona una operación</option>
+                    <option value="add">Agregar Proveedor</option>
+                    <option value="search">Buscar Proveedor</option>
+                    <option value="update">Actualizar Proveedor</option>
+                    <option value="delete">Eliminar Proveedor</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div id="addSupplierForm" style="display: none;">
+              <h4>Agregar Proveedor</h4>
+              <form>
+                <div class="form-group">
+                  <label for="supplierName">Nombre del Proveedor</label>
+                  <input type="text" class="form-control" id="supplierName" placeholder="Nombre del Proveedor">
+                </div>
+                <div class="form-group">
+                  <label for="supplierContact">Contacto</label>
+                  <input type="text" class="form-control" id="supplierContact" placeholder="Información de Contacto">
+                </div>
+                <button type="button" onclick="confirmAddSupplier()" class="btn btn-primary">Agregar Proveedor</button>
+              </form>
+            </div>
+            <div id="updateSupplierForm" style="display: none;">
+              <h4>Actualizar Proveedor</h4>
+              <form>
+                <div class="form-group">
+                  <label for="updateSupplierName">Nombre del Proveedor a Actualizar</label>
+                  <input type="text" class="form-control" id="updateSupplierName" placeholder="Nombre del Proveedor">
+                </div>
+                <div class="form-group">
+                  <label for="updateSupplierContact">Nuevo Contacto</label>
+                  <input type="text" class="form-control" id="updateSupplierContact" placeholder="Nuevo Contacto">
+                </div>
+                <button type="button" onclick="confirmUpdateSupplier()" class="btn btn-primary">Actualizar Proveedor</button>
+              </form>
+            </div>
+            <div id="deleteSupplierForm" style="display: none;">
+              <h4>Eliminar Proveedor</h4>
+              <form>
+                <div class="form-group">
+                  <label for="deleteSupplierName">Nombre del Proveedor a Eliminar</label>
+                  <input type="text" class="form-control" id="deleteSupplierName" placeholder="Nombre del Proveedor">
+                </div>
+                <button type="button" onclick="confirmDeleteSupplier()" class="btn btn-primary">Eliminar Proveedor</button>
+              </form>
+            </div>
+            <div id="searchSupplierForm" style="display: none;">
+              <h4>Buscar Proveedor</h4>
+              <form>
+                <div class="form-group">
+                  <label for="searchSupplierName">Nombre del Proveedor a Buscar</label>
+                  <input type="text" class="form-control" id="searchSupplierName" placeholder="Nombre del Proveedor">
+                </div>
+                <button type="button" onclick="confirmSearchSupplier()" class="btn btn-primary">Buscar Proveedor</button>
+                <!-- Aquí se mostrarán los resultados de la búsqueda -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Botón para redirigir a la página principal -->
+    <div class="row">
+      <div class="col-md-12">
+        <a href="../index.html" class="btn btn-secondary">Volver a Inicio</a>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<script>
+  function toggleForm() {
+    var selectBox = document.getElementById("supplierOperations");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+    document.getElementById("addSupplierForm").style.display = "none";
+    document.getElementById("updateSupplierForm").style.display = "none";
+    document.getElementById("deleteSupplierForm").style.display = "none";
+    document.getElementById("searchSupplierForm").style.display = "none";
+
+    if (selectedValue === "add") {
+      document.getElementById("addSupplierForm").style.display = "block";
+    } else if (selectedValue === "update") {
+      document.getElementById("updateSupplierForm").style.display = "block";
+    } else if (selectedValue === "delete") {
+      document.getElementById("deleteSupplierForm").style.display = "block";
+    } else if (selectedValue === "search") {
+      document.getElementById("searchSupplierForm").style.display = "block";
+    }
+  }
+
+  function confirmAddSupplier() {
+    if (confirm("¿Estás seguro de agregar este proveedor?")) {
+      // Aquí iría la lógica para agregar el proveedor
+      var supplierName = document.getElementById("supplierName").value;
+      var contact = document.getElementById("supplierContact").value;
+      console.log("Agregar proveedor:", supplierName, contact);
+      alert("¡Proveedor agregado exitosamente!");
+    }
+  }
+
+  function confirmUpdateSupplier() {
+    if (confirm("¿Estás seguro de actualizar este proveedor?")) {
+      // Aquí iría la lógica para actualizar el proveedor
+      var supplierName = document.getElementById("updateSupplierName").value;
+      var contact = document.getElementById("updateSupplierContact").value;
+      console.log("Actualizar proveedor:", supplierName, contact);
+      alert("¡Proveedor actualizado exitosamente!");
+    }
+  }
+
+  function confirmDeleteSupplier() {
+    if (confirm("¿Estás seguro de eliminar este proveedor?")) {
+      // Aquí iría la lógica para eliminar el proveedor
+      var supplierName = document.getElementById("deleteSupplierName").value
+      ;
+      console.log("Eliminar proveedor:", supplierName);
+      alert("¡Proveedor eliminado exitosamente!");
+    }
+  }
+
+  function confirmSearchSupplier() {
+    if (confirm("¿Estás seguro de buscar este proveedor?")) {
+      // Aquí iría la lógica para buscar el proveedor
+      var supplierName = document.getElementById("searchSupplierName").value;
+      console.log("Buscar proveedor:", supplierName);
+      // Aquí deberías mostrar los resultados de la búsqueda
+      alert("¡Búsqueda exitosa!");
+    }
+  }
+</script>
+
+</body>
+</html>
+
