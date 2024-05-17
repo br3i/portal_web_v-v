@@ -214,7 +214,7 @@
                       </div>
                       <button
                         type="button"
-                        onclick="confirmCreate()"
+                        onclick="mokConfirmCreate()"
                         class="btn btn-primary"
                       >
                         Crear
@@ -237,7 +237,7 @@
                       </div>
                       <button
                         type="button"
-                        onclick="confirmRead()"
+                        onclick="mokConfirmRead()"
                         class="btn btn-primary"
                       >
                         Buscar
@@ -272,7 +272,7 @@
                       </div>
                       <button
                         type="button"
-                        onclick="confirmUpdate()"
+                        onclick="mokConfirmUpdate()"
                         class="btn btn-primary"
                       >
                         Actualizar
@@ -295,7 +295,7 @@
                       </div>
                       <button
                         type="button"
-                        onclick="confirmDelete()"
+                        onclick="mokConfirmDelete()"
                         class="btn btn-primary"
                       >
                         Eliminar
@@ -308,7 +308,6 @@
           </div>
           <!-- Botón para redirigir a index.html -->
           
-          </div>
         </div>
         <!-- /.container-fluid -->
       </section>
@@ -336,44 +335,111 @@
         }
       }
 
-      function confirmCreate() {
+      function mokConfirmCreate() {
+        var serviceName = document.getElementById("createServiceName").value.trim();
+        var serviceDescription = document.getElementById("createServiceDescription").value.trim();
+
+        if (!serviceName) {
+          alert("Por favor, ingrese el nombre del servicio.");
+          return;
+        }
+
+        if (serviceName.length < 3) {
+          alert("El nombre del servicio debe tener al menos 3 caracteres.");
+          return;
+        }
+
+        if (!serviceDescription) {
+          alert("Por favor, ingrese la descripción del servicio.");
+          return;
+        }
+
+        if (serviceDescription.length < 10) {
+          alert("La descripción del servicio debe tener al menos 10 caracteres.");
+          return;
+        }
+
         if (confirm("¿Estás seguro de que quieres crear este servicio?")) {
           // Aquí iría la lógica para crear el servicio
-          console.log("Servicio creado.");
+          console.log("Servicio creado:", serviceName, serviceDescription);
           alert("¡Servicio creado exitosamente!");
         }
       }
 
-      function confirmRead() {
+
+      function mokConfirmRead() {
+        var serviceName = document.getElementById("readServiceName").value.trim();
+
+        if (!serviceName) {
+          alert("Por favor, ingrese el nombre del servicio.");
+          return;
+        }
+
+        if (serviceName.length < 3) {
+          alert("El nombre del servicio debe tener al menos 3 caracteres.");
+          return;
+        }
+
         if (confirm("¿Estás seguro de que quieres buscar este servicio?")) {
           // Aquí iría la lógica para buscar el servicio
-          var serviceName = document.getElementById("readServiceName").value;
           console.log("Buscar servicio:", serviceName);
-          // Aquí deberías mostrar los resultados de la búsqueda
           alert("¡Búsqueda exitosa!");
         }
       }
 
-      function confirmUpdate() {
+
+      function mokConfirmUpdate() {
+        var serviceName = document.getElementById("updateServiceName").value.trim();
+        var serviceDescription = document.getElementById("updateServiceDescription").value.trim();
+
+        if (!serviceName) {
+          alert("Por favor, ingrese el nombre del servicio.");
+          return;
+        }
+
+        if (serviceName.length < 3) {
+          alert("El nombre del servicio debe tener al menos 3 caracteres.");
+          return;
+        }
+
+        if (!serviceDescription) {
+          alert("Por favor, ingrese la descripción del servicio.");
+          return;
+        }
+
+        if (serviceDescription.length < 10) {
+          alert("La descripción del servicio debe tener al menos 10 caracteres.");
+          return;
+        }
+
         if (confirm("¿Estás seguro de que quieres actualizar este servicio?")) {
           // Aquí iría la lógica para actualizar el servicio
-          var serviceName = document.getElementById("updateServiceName").value;
-          var serviceDescription = document.getElementById(
-            "updateServiceDescription"
-          ).value;
           console.log("Actualizar servicio:", serviceName, serviceDescription);
           alert("¡Servicio actualizado exitosamente!");
         }
       }
 
-      function confirmDelete() {
+
+      function mokConfirmDelete() {
+        var serviceName = document.getElementById("deleteServiceName").value.trim();
+
+        if (!serviceName) {
+          alert("Por favor, ingrese el nombre del servicio.");
+          return;
+        }
+
+        if (serviceName.length < 3) {
+          alert("El nombre del servicio debe tener al menos 3 caracteres.");
+          return;
+        }
+
         if (confirm("¿Estás seguro de que quieres eliminar este servicio?")) {
           // Aquí iría la lógica para eliminar el servicio
-          var serviceName = document.getElementById("deleteServiceName").value;
           console.log("Eliminar servicio:", serviceName);
           alert("¡Servicio eliminado exitosamente!");
         }
       }
+
     </script>
   </body>
 </html>

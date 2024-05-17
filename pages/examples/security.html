@@ -213,7 +213,7 @@
                       </div>
                       <button
                         type="button"
-                        onclick="confirmEntry()"
+                        onclick="mokConfirmEntry()"
                         class="btn btn-primary"
                       >
                         Registrar Entrada
@@ -236,7 +236,7 @@
                       </div>
                       <button
                         type="button"
-                        onclick="confirmExit()"
+                        onclick="mokConfirmExit()"
                         class="btn btn-primary"
                       >
                         Registrar Salida
@@ -259,7 +259,7 @@
                       </div>
                       <button
                         type="button"
-                        onclick="confirmIncident()"
+                        onclick="mokConfirmIncident()"
                         class="btn btn-primary"
                       >
                         Registrar Incidente
@@ -271,7 +271,7 @@
             </div>
           </div>
           <!-- Botón para redirigir a la página principal -->
-          
+         
         </div>
         <!-- /.container-fluid -->
       </section>
@@ -296,39 +296,77 @@
         }
       }
 
-      function confirmEntry() {
-        if (
-          confirm("¿Estás seguro de registrar la entrada de este visitante?")
-        ) {
+      function mokConfirmEntry() {
+        var visitorName = document.getElementById("entryVisitorName").value.trim();
+        var purpose = document.getElementById("entryPurpose").value.trim();
+
+        if (!visitorName) {
+          alert("Por favor, ingrese el nombre del visitante.");
+          return;
+        }
+
+        if (visitorName.length < 3) {
+          alert("El nombre del visitante debe tener al menos 3 caracteres.");
+          return;
+        }
+
+        if (!purpose) {
+          alert("Por favor, ingrese el motivo de la visita.");
+          return;
+        }
+
+        if (purpose.length < 5) {
+          alert("El motivo de la visita debe tener al menos 5 caracteres.");
+          return;
+        }
+
+        if (confirm("¿Estás seguro de registrar la entrada de este visitante?")) {
           // Aquí iría la lógica para registrar la entrada
-          var visitorName = document.getElementById("entryVisitorName").value;
-          var purpose = document.getElementById("entryPurpose").value;
           console.log("Registrar entrada:", visitorName, purpose);
           alert("¡Entrada registrada exitosamente!");
         }
       }
 
-      function confirmExit() {
-        if (
-          confirm("¿Estás seguro de registrar la salida de este visitante?")
-        ) {
+      function mokConfirmExit() {
+        var visitorName = document.getElementById("exitVisitorName").value.trim();
+
+        if (!visitorName) {
+          alert("Por favor, ingrese el nombre del visitante.");
+          return;
+        }
+
+        if (visitorName.length < 3) {
+          alert("El nombre del visitante debe tener al menos 3 caracteres.");
+          return;
+        }
+
+        if (confirm("¿Estás seguro de registrar la salida de este visitante?")) {
           // Aquí iría la lógica para registrar la salida
-          var visitorName = document.getElementById("exitVisitorName").value;
           console.log("Registrar salida:", visitorName);
           alert("¡Salida registrada exitosamente!");
         }
       }
 
-      function confirmIncident() {
+      function mokConfirmIncident() {
+        var description = document.getElementById("incidentDescription").value.trim();
+
+        if (!description) {
+          alert("Por favor, ingrese la descripción del incidente.");
+          return;
+        }
+
+        if (description.length < 10) {
+          alert("La descripción del incidente debe tener al menos 10 caracteres.");
+          return;
+        }
+
         if (confirm("¿Estás seguro de registrar este incidente?")) {
           // Aquí iría la lógica para registrar el incidente
-          var description = document.getElementById(
-            "incidentDescription"
-          ).value;
           console.log("Registrar incidente:", description);
           alert("¡Incidente registrado exitosamente!");
         }
       }
+
     </script>
   </body>
 </html>
