@@ -1,0 +1,31 @@
+{
+  "name": "portal_web_v-v",
+  "version": "1.0.0",
+  "description": "Jest Test",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/br3i/portal_web_v-v.git"
+  },
+  "keywords": [
+    "jest",
+    "testing"
+  ],
+  "author": "Andres Lagos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/br3i/portal_web_v-v/issues"
+  },
+  "homepage": "https://github.com/br3i/portal_web_v-v#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.5",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}
